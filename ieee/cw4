@@ -1,0 +1,43 @@
+"""
+i=0
+while(i<=10):
+    print(i)
+    i+=1
+"""
+"""
+i=int (input())
+while(i>0):
+    print(i)
+    i-=1
+"""
+"""
+i=int (input())
+toplam=0
+while(i!=0):
+    toplam+=i
+    i=int(input())
+
+print("toplam = ",toplam)
+"""
+"""
+print("kullanıcı giriş")
+giris=1
+my_id="berkant"
+password="1234"
+
+id_1=input("Enter your id: ")
+password_1=input("Enter your password: ")
+
+while(giris==1):
+    if(id_1==my_id and password_1==password):
+        giris=0
+        print("Welcome!")
+    else:
+        print("Invalid Access")
+        id_1=input("Enter your id: ")
+        password_1=input("Enter your password: ")
+
+        if(id_1==my_id and password_1==password):
+            giris=0
+            print("Welcome!")
+"""
