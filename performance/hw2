@@ -1,0 +1,76 @@
+clear all
+clc
+close all
+
+
+%% User Inputs
+
+% Type of airfoil
+typeNACA = '4424';
+
+% Extract values from type of airfoil string
+Minit = str2double(typeNACA(1));  
+Pinit = str2double(typeNACA(2));
+Tinit = str2double(typeNACA(3:4));
+
+% Number of grid points
+gridPts = 500;
+
+% Constants
+a0 = 0.2969;
+a1 = -0.1260;
+a2 = -0.3516;
+a3 = 0.2843;
+a4 = -0.1015;     % Open trailing edge
+a4 = -0.1036;     % Closed trailing edge
+
+%% Calculations
+
+% Actual percentage values of airfoil properties
+M = Minit/100;
+P = Pinit/10;
+T = Tinit/100;
+
+% Airfoil grid
+x = linspace(0,1,gridPts)';
+
+% Camber and Gradient
+yc     = ones(gridPts,1);
+dyc_dx = ones(gridPts,1);
+theta  = ones(gridPts,1);
+for i = 1:1:gridPts
+    if (x(i) >= 0 && x(i) < P)
+        yc(i)     = (M/P^2)*((2*P*x(i))-x(i)^2);
+        dyc_dx(i) = ((2*M)/(P^2))*(P-x(i));
+    elseif (x(i) >=P && x(i) <=1)
+        yc(i)     = (M/(1-P)^2)*(1-(2*P)+(2*P*x(i))-(x(i)^2));
+        dyc_dx(i) = ((2*M)/((1-P)^2))*(P-x(i));
+    end
+    theta(i) = atan(dyc_dx(i));
+end
+
+% Thickness distribution
+yt = 5*T.*((a0.*sqrt(x)) + (a1.*x) + (a2.*x.^2) + (a3.*x.^3) + (a4.*x.^4));
+
+% Upper surface points
+xu = x(:) - yt(:).*sin(theta);
+yu = yc(:) + yt(:).*cos(theta);
+
+% Lower surface points
+xl = x(:) + yt(:).*sin(theta);
+yl = yc(:) - yt(:).*cos(theta);
+
+% Plot the airfoil (with lines)
+f1 = figure(1);
+hold on; grid on;
+axis equal;
+plot(xu,yu,'r-');
+plot(xl,yl,'k-');
+plot(x,yc,'b-');
+
+set(gca,'FontSize',20)
+xlabel('x')
+ylabel('y')
+title('Airfoil NACA 4424')
+
+
