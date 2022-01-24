@@ -1,0 +1,99 @@
+"""
+sayı=int(input("sayı?"))
+
+if (sayı>90):
+    print("90dan büyük")
+elif (sayı>70):
+    print("70'den büyük")
+elif (sayı>60):
+    print("60'den büyük")
+else:
+    print("error")
+"""
+
+"""
+boy=float(input("boy (m):"))
+kilo=int(input("kilo:"))
+
+BKI=kilo/(boy*boy)
+
+if(BKI<18.5):
+    print ("zayıf")
+elif(BKI<25):
+    print ("normal")
+elif(BKI<30):
+    print ("fazla kilolu")
+else:
+    print("obez")
+"""
+"""
+num1 = int(input("ilk sayı: "))
+num2 = int(input("ikinci sayı: "))
+num3 = int(input("üçüncü sayı: "))
+
+if (num1 > num2 and num1 > num3):
+   büyük = num1
+elif (num2 > num1 and num2 > num3):
+   büyük = num2
+else:
+   büyük = num3
+ 
+print("en büyük sayı:",büyük)
+"""
+"""
+mt1 = float(input("Enter mt1 grade: "))
+mt2 = float(input("Enter mt2 grade: "))
+final = float(input("Enter final grade: "))
+
+average = (mt1*(0.3))+(mt2*(0.3))+(final*(0.4))
+
+if(average>=90):
+    print("AA")
+elif(average>=85):
+    print("BA")
+elif(average>=80):
+    print("BB")
+elif(average>=75):
+    print("CB")
+elif(average>=70):
+    print("CC")
+elif(average>=65):
+    print("CD")
+elif(average>=60):
+    print("DD")
+elif(average>=55):
+    print("FD")
+else:
+    print("FF")
+"""
+"""
+soru= input("üçgen mi dörtgen mi?: ")
+if (soru == 'üçgen'):
+        üç1 = int(input("üçgen kenar 1: "))
+        üç2 = int(input("üçgen kenar 2: "))
+        üç3 = int(input("üçgen kenar 3: "))
+        if (abs(üç2-üç3) < üç1 < üç2+üç3):
+            print("üçgen oluşturur")
+        elif (abs(üç1-üç3) < üç2 < üç1+üç3):
+            print("üçgen oluşturur")
+        elif (abs(üç1-üç2) < üç3 < üç1+üç2):
+            print("üçgen oluşturur")
+        else:
+            print("üçgen oluşturmaz")
+
+        if (üç1==üç2==üç3):
+            print("eşkenar")
+        elif(üç1==üç2 or üç1==üç3 or üç2==üç3):
+            print("ikizkenar")
+if (soru == 'dörtgen'):
+        dö1 = int(input("dörtgen kenar 1: "))
+        dö2 = int(input("dörtgen kenar 2: "))
+        dö3 = int(input("dörtgen kenar 3: "))
+        dö4 = int(input("dörtgen kenar 4: "))
+        if(dö1==dö2==dö3==dö4):
+            print("kare")
+        elif(dö1==dö3 or dö4==dö2):
+            print("dikdörtgen")
+        else:
+            print("sıradan dörtgen")
+"""
