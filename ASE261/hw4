@@ -1,0 +1,11 @@
+%since 0 <= h <= 1
+x = 0:0.1:1;
+
+%from the equation written on page 1-a
+t = (1470*sqrt((x.^2)+(2.5^2)))./x;
+
+plot(x,t, 'r')
+
+xlabel('Height'), 
+ylabel('Tension'), 
+title('T between h0-h1'),
