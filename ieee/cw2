@@ -1,0 +1,38 @@
+"""
+a=int(input("enter first integer"))
+b=int(input("enter second integer"))
+c=int(input("enter third integer"))
+print("toplam: {}*{}*{}={}" .format( a, b, c, a*b*c))
+"""
+
+"""
+a=int(input("boy:"))
+b=int(input("kilo"))
+print("beden kitle indeksi: {}" .format (b/(a*a)))
+"""
+"""
+a=input("Ad:")
+b=input("Soyad:")
+c=input("Numara")
+print("Ad: {} \nSoyad:{} \nNumara:{}" .format (a, b, c))
+"""
+"""
+a=int(input("enter first integer"))
+b=int(input("enter second integer"))
+c=int(input("enter third integer"))
+print("average: {}" .format((a*b*c)/3))
+"""
+"""
+a=int(input("birinci kenar"))
+b=int(input("ikinci kenar"))
+c =(a**2 + b**2)
+print("hipotenüs: {}", c)
+"""
+"""
+a=int(input("enter x:"))
+print("f(x)=x^3+2x+7")
+b=(a**3)*(2*a)+7
+print("f(x)=", b)
+"""
+
+
