@@ -1,0 +1,34 @@
+#task 1
+print("hello world")
+#task 2
+print("canda atalay")
+#task 3
+print("canda\natalay")
+#task 4
+a=3
+b=5
+print(a+b)
+print(a*b)
+print(b-a)
+print(a**b, b**a)
+print("first value is {} and second value is {}" .format (a,b))
+ 
+#task 5
+a=3
+b=4
+c=5
+cevre=a+b+c
+print("kenarları {},{},{} olan üçgenin çevresi:{}" .format(a,b,c,cevre))
+ 
+#task 6
+pi=3
+r=2
+alan=pi*(r**2)
+cevre=2*pi*r
+print("alanı= {} \ncevre= {}" .format(alan, cevre))
+ 
+#task 7
+a=3
+b=4
+c=a+b
+print("{}+{}={}" .format( a, b, c))
